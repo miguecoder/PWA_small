@@ -17,3 +17,5 @@
     <li>Multer</li>
 </ul>
 
+<p>You can go and prove this PWA with the link: https://miguecoder.github.io/PWA_small/</p>
+

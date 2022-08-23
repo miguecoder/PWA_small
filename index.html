@@ -29,7 +29,7 @@
         <h1>PWA DE PRUEBA</h1>
         <img src="./img/ProgramadorFitness.png" alt="#ProgramadorFitness">
         <p>
-          Ete es un ejemplo de los elementos que se deben agregar a una sitio web, para que pase a ser una PWA con responsive desing.
+          Este es un ejemplo de los elementos que se deben tener en cuenta y agregar a un sitio web con responsive desing, para que pase a ser una PWA. 
         </p>
         <nav>
           <a href="https://www.youtube.com/playlist?list=PLvq-jIkSeTUbJFWQx8gcy1MK0lTLrdLR9" target="_blank" title="YouTube">
@@ -44,7 +44,195 @@
         </nav>
     </header>
     <main class="Main">
+      <!--Punto 1-->
+      <p><strong>1. Una PWA </strong>permite ser descargada desde el navegador de un dispositivo, con la opción:</p>
+      <div style="text-align: center;">
+        <button style="position: relative; max-width: 45vw; min-width: 180px;">
+          <p style="font-size: 80%;">Añadir a pantalla de inicio</p>
+        </button>
+      </div>
+      
+      
+      <p>Para que esto ocurra es necesario que el sitio web cumpla con las siguientes condiciones:</p>
+      <ul>
+        <li> <p>- Debe tener activado un service worker.</p></li>
+        <li> <p>- Debe estar desplegada por protocolo seguro https.</p> </li>
+      </ul>
+      <!--Punto 2-->
+      <p> <strong>2. Las pruebas locales </strong> deben ser ejecutadas en un servidor (los service worker funcionan con el protocolo https y Localhost), cómo por ejemplo:</p>
+      <ul>
+        <li> <strong> <a href="https://es.wikipedia.org/wiki/XAMPP">XAMPP:</a></strong> X (cualquier sistema operativo), Apache, MariaDB/MySQL, PHP, Perl. </li>
+        <li> <strong> <a href="https://es.wikipedia.org/wiki/MAMP">MAMP:</a></strong> Mac OS, Apache, MariaDB/MySQL, PHP, Perl y Python. </li>
+        <li> <strong> <a href="https://es.wikipedia.org/wiki/LAMP">  LAMP: </a></strong>Linux, Apache, MariaDB/MySQL, PHP, Python. </li>
+      </ul>
+      <!--Punto 3-->
+      <p><strong>3. Etiquetas Metadatos</strong></p>
+      <p>- Agregamos estas etiquetas metadatos al head de nuestro sitio web, con estas importamos las fuentes de google fonts que nos gusta para nuestro sitio web :</p>
+     
+      <div class="head">
+        <img src="img\fonts.png" alt="fonts" class="">
+      </div>
+        
+      <!--
+      <div style="width: 100vw;">
+        
+        <pre><code style="font-size: 93%;"><strong>&ltlink href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"&gt</code></pre>
+        
+        <pre><code style="font-size: 93%;"><strong> &ltlink href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"&gt</strong></code></pre>
+      </div>
+      -->
+     
+      
+      <p>- Agregamos las siguientes etiquetas metadatos al head de nuestro sitio web, con estas aseguramos que nuestro sitio tendrá una buena adaptación a los diversos tamaños de pantalla de los dispositivos actuales:</p>
+      <div class="head">
+        <img src="img\displays.png" alt="conten_head" class="">
+      </div>
+      <!--
+      <pre><code style="font-size: 93%;"><strong>
+        &ltmeta name="theme-color" content="#F0DB4F"&gt <br>
+        &ltmeta name="MobileOptimized" content="width"> <br>
+        &ltmeta name="HandheldFriendly" content="true"> <br>
+        &ltmeta name="apple-mobile-web-app-capable" content="yes"> <br>
+        &ltmeta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  <br>
+      </strong>
+      </code></pre>
+      -->
+      <p>- Agregamos los iconos favicon a el sitio web, estos iconos deben estar en diversos tamaños, desde 16 x 16 px hasta 1024 x 1024 px</p>
+      <div class="head">
+        <img src="img\metafavico.png" alt="favicon" class="">
+      </div>
+      <!--
+      <pre><code style="font-size: 93%;"><strong>
+      &ltlink rel="shortcut icon" type="image/png" href="./img/ProgramadorFitness.png"> <br>
+      &ltlink rel="apple-touch-icon" href="./ProgramadorFitness.png"> <br>
+      &ltlink rel="apple-touch-startup-image" href="./ProgramadorFitness.png"> <br>
+      </strong>
+      </code></pre>
+      -->
+      
+
+      <p>- Agregamos la hoja de estilos (style.css) y un archivo muy importante llamado manifest.js el cual crearemos en el siguiente punto:</p>
+      <div class="head">
+        <img src="img\symanifest.png" alt="style and manifest" class="">
+      </div>
+      <!--
+      <pre><code style="font-size: 93%;"><strong>
+      &ltlink rel="stylesheet" href="style.css"><br>
+      &ltlink rel="manifest" href="./manifest.json"><br>
+      </strong>
+      </code></pre>
+      -->
+      <p>- El contenido de la etiqueta head se debe ver asi:</p>            
+      <div class="head">
+        <img src="img\head.png" alt="conten_head" class="">
+      </div>
+
+      <!--Punto 4-->
+      <p><strong>4. Archivo manifiesto</strong></p>
+      <p>- El paso a seguir es crear un archivo .json con el manifiesto de nuestra app web, a este archivo se le llamara <strong>manifest.json</strong>. 
+      <p>El <strong>manifest.json</strong> es un archivo JSON simple en su sitio web que le informa al navegador sobre su sitio web en el dispositivo móvil o computadora de escritorio del usuario. Chrome requiere tener un manifiesto para mostrar el mensaje Agregar a la pantalla de inicio.</p>  <p>El archivo manifest.json contiene detalles del nombre de la aplicación de su sitio web, los íconos que debe usar, el start_url en el que debe comenzar cuando se inicia y muchos otros detalles. <a href="https://blog.nubecolectiva.com/que-es-y-como-configurar-manifest-json-en-una-pagina-web/">Clic aquí para una explicación mas detallada.</a></p>
+      <p>Creamos el archivo <strong>manifest.json</strong> en la misma carpeta del proyecto:</p>
+      <div class="head">
+        <img src="img\create_manifest.png" alt="manifest">
+      </div>
+      <p>Para este ejemplo el contenido del archivo manifest deberá ser el siguiente:</p>
+      <div class="head manifiestos">
+        <img src="img\manifiesto1.png" alt="manifest">
+        <img src="img\manifiesto2.png" alt="manifest">
+      </div>
+      <!--  
+      {
+        "name": "#PWA to prove",
+        "short_name": "#PWA to prove",
+        "description": "Esta es una prueba de los
+        parametro a seguir para transformar una 
+        pagina web a una PWA",
+        "background_color": "#2B2B2B",
+        "theme_color": "#F0DB4F",
+        "orientation": "portrait",
+        "display": "standalone",
+        "start_url": "./?utm_source=web_app_manifest",
+        "scope": "./",
+        "lang": "es-MX",
+        "icons": [
+          {
+            "src": "./img/icon_1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/icon_32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+          },
+          {
+            "src": "./img/favicon.png",
+            "sizes": "16x16",
+            "type": "image/png"
+          }
+        ]
+      }
+  -->
+
+      <p>Las propiedades: 
+      <!--
+      <pre><code>
+      "name": "#PWA to prove",
+      "short_name": "#PWA to prove",
+      "description": "Esta es una prueba de los
+      parametro a seguir para transformar una 
+      pagina web a una PWA",
+      "background_color": "#2B2B2B",
+      "theme_color": "#F0DB4F",
+      </code></pre>
+      -->
+      </p>
+      <div class="head manifiestos">
+        <img src="img\p_cambiar.png" alt="propiedades a cambiar">
+        >
+      </div>
+      <p>Deben ser cambiadas al nombre de cada proyecto.</p>
+      
+      <!--Cambios-->
+      <p><strong>Esta informacion fue tomada del siguiente curso:</strong></p>
+      <div class="Main">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9oQIylJ-JpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </main>
     <script src="./script.js"></script>
 </body>
