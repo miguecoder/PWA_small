@@ -94,11 +94,11 @@ ul li {
 .head{
   padding-left: 0%;
   position: relative;
-  align-items: center;
+  text-align: center;
 }
 .head img {
   padding-left: 0%;
-  width: 100%;
+  max-width: 100vw;
 }
 .manifest {
   position: relative;
